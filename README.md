@@ -24,4 +24,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Advance:
 
-<img src="./assets-md/ruta-ciclo.png" alt="progress" />
+<img src="./assets/ruta-ciclo.png" alt="progress" />
