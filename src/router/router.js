@@ -16,11 +16,17 @@ const routes = [
       ),
   },
   {
-    path: '/id',
+    path: '/:id',
     component: () =>
       import(
         /* webpackChunkName: "PokemonPage" */ '../modules/pokemon/pages/PokemonPage'
       ),
+    props: (route) => {
+      // const { id } = route.params;
+      // Validamos si el id es un NaN
+      const id = Number(route.params.id);
+      return isNaN(id) ? { id: 1 } : { id };
+    },
   },
   {
     path: '/:pathMatch(.*)*',
