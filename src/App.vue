@@ -4,6 +4,9 @@
     <div class="app__contenedorLogo">
       <img src="./assets/logo.png" />
     </div>
+  </div>
+
+  <div class="router__contenedor">
     <router-view />
   </div>
 </template>
@@ -33,5 +36,12 @@ export default {
 
 .app__contenedorLogo {
   max-width: 120rem;
+}
+
+.router__contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
