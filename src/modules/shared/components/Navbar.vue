@@ -23,8 +23,8 @@ export default {
   data() {
     return {
       links: [
-        { to: '/', name: 'Pokemon' },
-        { to: '/pokemonid/50', name: 'Por ID' },
+        { to: '/home', name: 'Home' },
+        { to: '/pokemonid/3', name: 'Por ID' },
         { to: '/about', name: 'About' },
         { to: 'https://google.com', name: 'Google' },
       ],
