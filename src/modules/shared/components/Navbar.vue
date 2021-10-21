@@ -23,9 +23,13 @@ export default {
   data() {
     return {
       links: [
-        { to: '/home', name: 'Home' },
-        { to: '/pokemonid/3', name: 'Por ID' },
-        { to: '/about', name: 'About' },
+        { to: 'pokemon-home', name: 'Home' },
+        { to: 'pokemon-about', name: 'Pokemon About' },
+        { to: 'pokemon-id', name: 'Por ID', id: 151 },
+
+        { to: 'dbz-about', name: 'DBZ-About' },
+        { to: 'dbz-characters', name: 'DBZ-Characters' },
+
         { to: 'https://google.com', name: 'Google' },
       ],
     };

@@ -1,6 +1,11 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/pokemon',
+  },
+
   // TODO: Pokemon Routes
   {
     path: '/pokemon',
@@ -99,7 +104,5 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
 });
-
-// TODO: Hola este es un texto de ejemplo
 
 export default router;
