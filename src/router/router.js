@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
+import isAuthenticatedGuard from './auth-guard';
 
 const routes = [
   {
@@ -60,6 +61,8 @@ const routes = [
   {
     path: '/bdz',
     name: 'dbz',
+    // Guard
+    beforeEnter: [isAuthenticatedGuard],
     component: () =>
       import(
         /* webpackChunkName: "DragonBallLayout" */ '../modules/dbz/layouts/DragonBallLayout'
@@ -104,5 +107,38 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
 });
+
+// Como su nombre indica, los guardias de navegación proporcionados por vue-router se utilizan principalmente para proteger las navegaciones, ya sea redirigiéndolas o cancelándolas. Hay un número de maneras de enganchar en el proceso de navegación de la ruta: globalmente, por ruta, o en el componente.
+
+// router.beforeEach((to, from, next) => {
+//   const random = Math.random() * 100;
+
+//   if (random > 50) {
+//     next();
+//   } else {
+//     console.log(random, 'Bloqueado por el beforeEach guard');
+//     next({ name: 'pokemon-home' });
+//   }
+// });
+
+// const canAccess = () => {
+//   return new Promise((resolve) => {
+//     const random = Math.random() * 100;
+
+//     if (random > 50) {
+//       resolve(true);
+//     } else {
+//       console.log(random, 'Bloqueado por el beforeEach guard');
+//       resolve(false);
+//     }
+//   });
+// };
+
+// // Guard asincrono
+// router.beforeEach(async (to, from, next) => {
+//   const autorized = await canAccess();
+
+//   autorized ? next() : next({ name: 'pokemon-home' });
+// });
 
 export default router;
