@@ -3,10 +3,12 @@ const isAuthenticatedGuard = async (to, from, next) => {
 
   return new Promise(() => {
     if (random > 50) {
+      console.log(random);
       next();
     } else {
       console.log('You cannnot enter');
-      next(false);
+      // next(false);
+      next({ name: 'pokemon-home' });
     }
   });
 };

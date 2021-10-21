@@ -62,6 +62,7 @@ const routes = [
     path: '/bdz',
     name: 'dbz',
     // Guard
+    // TODO: una vez que este dentro de las rutas ya esta validado el usuario para navegar en ellas, pero al salirse a rutas de pokemon entonces otra vez se tendra que validar
     beforeEnter: [isAuthenticatedGuard],
     component: () =>
       import(
@@ -72,6 +73,8 @@ const routes = [
       {
         path: 'about',
         name: 'dbz-about',
+        // TODO: Pero podemons aplicarlo en una ruta en particular si asi lo deseamos
+        beforeEnter: [isAuthenticatedGuard],
         component: () =>
           import(
             /* webpackChunkName: "AboutPage" */ '../modules/dbz/pages/AboutPage'
