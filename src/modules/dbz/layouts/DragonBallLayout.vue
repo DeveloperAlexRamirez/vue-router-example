@@ -7,7 +7,7 @@
 
 <style scoped>
 .dragon-layout {
-  background-color: rgb(20, 130, 255);
+  background-color: #e2551c;
   width: 100%;
   display: flex;
   flex: 1;

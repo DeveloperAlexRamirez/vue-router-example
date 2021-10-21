@@ -7,7 +7,7 @@
 
 <style scoped>
 .pokemon-layout {
-  background-color: deeppink;
+  background-color: #41b883;
   width: 100%;
   display: flex;
   flex: 1;
